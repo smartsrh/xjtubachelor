@@ -1,6 +1,6 @@
 % !TEX program = xelatex
 % smartsrh <smartsrh@gmail.com>
-% https://www.github.com/smartsrh/xjtuBanchelor/
+% https://www.github.com/smartsrh/xjtubachelor/
 % The template is written for XJTU bachelor thesis in 2016
 % To use this template requires fundementals of LaTeX
 % Please follow the annotations to complete and compile these tex files

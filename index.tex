@@ -1,0 +1,37 @@
+% !TEX program = xelatex
+% smartsrh <smartsrh@gmail.com>
+% https://www.github.com/smartsrh/xjtuBanchelor/
+% The template is written for XJTU bachelor thesis in 2016
+% To use this template requires fundementals of LaTeX
+% Please follow the annotations to complete and compile these tex files
+% License: MIT License
+\documentclass{xjtubachelor}
+\graphicspath{{img/}} % 图片存放的目录
+\input{chapters/basicInfo.tex} % 请在 basicInfo.tex 填写基本信息比如姓名
+\begin{document}
+    \frontmatter
+        \abstract
+        \tableofcontents
+    \mainmatter
+        % 请将各个章的内容分别存放到 chapters 文件夹的 tex 文件中
+        % 仿照下面的方式引入各个章
+        \input{chapters/testTitles.tex}
+        \input{chapters/testEquations.tex}
+        \input{chapters/testPics.tex}
+        \input{chapters/testTables.tex}
+        \input{chapters/testBibs.tex}
+
+        % 请在 index.bib 中录入参考文献，格式与关键词参阅 GBT7714－2005N.bst
+        % 注意需要多次编译才能插入完整的参考文献
+        \clearpage
+        \addcontentsline{toc}{chapter}{参考文献}
+        \bibliographystyle{GBT7714-2005N}
+        \bibliography{index}
+    \backmatter
+        % 请将各个附录的内容分别存放到 chapters 文件夹的 tex 文件中
+        % 仿照下面的方式引入各个附录
+        \appendixStart
+            \input{chapters/testAppendix.tex}
+        \appendixEnd
+        \input{chapters/acknowledge.tex}
+\end{document}

@@ -24,6 +24,7 @@ The following packages are included in `xjtubachelor.cls`.
 - `titlesec`
 - `titletoc`
 - `hyperref`
+- `caption`
 
 ## Usage
 

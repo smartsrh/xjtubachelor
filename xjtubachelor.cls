@@ -10,10 +10,11 @@
 \LoadClass[a4paper,openany]{book}
 \RequirePackage[space]{ctexcap}\zihao{-4}
 \RequirePackage[numbers,sort&compress,square,super]{natbib} % the perfect position of natbib to avoid error
-\RequirePackage{graphicx,amsmath,hypernat,tabularx,array,longtable,threeparttable,booktabs}
+\RequirePackage{graphicx,amsmath,hypernat,tabularx,array,longtable,threeparttable,booktabs,caption}
 \RequirePackage[left=2.6cm,right=2.6cm,top=3.0cm,bottom=2.5cm]{geometry}
 \RequirePackage{appendix}\RequirePackage[version=3]{mhchem}
 \renewcommand{\bibfont}{\normalsize}
+\captionsetup{labelsep=quad}\captionsetup[longtable]{labelsep=quad} % eliminate colon in captions
 
 % adjust the style of the head and the foot of the style
 \RequirePackage{fancyhdr}\pagestyle{fancy}\fancyhf{}

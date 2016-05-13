@@ -3,7 +3,7 @@
 
 ## Introduction
 
-This is a fast, simple template for Xi'an Jiao Tong University Bachelor thesis 2016.
+This is a fast, simple template for Xi'an Jiaotong University Bachelor thesis 2016.
 
 The following packages are included in `xjtubachelor.cls`.
 

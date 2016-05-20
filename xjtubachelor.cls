@@ -18,12 +18,12 @@
 
 % adjust the style of the head and the foot of the style
 \RequirePackage{fancyhdr}\pagestyle{fancy}\fancyhf{}
-\fancyhead[EC]{\normalsize\color{gray} 西安交通大学本科毕业设计（论文）}
-\fancyhead[OC]{\color{gray}\leftmark}\fancyfoot[EL,OR]{\thepage}
+\fancyhead[EC]{\small\color{gray} 西安交通大学本科毕业设计（论文）}
+\fancyhead[OC]{\small\color{gray}\leftmark}\fancyfoot[EL,OR]{\thepage}
 \renewcommand{\headrule}{\hrule width\headwidth height.5bp\vspace{.4pt}\hrule width\headwidth height.5bp}
 \fancypagestyle{plain}{\fancyhf{}%
-\fancyhead[EC]{\normalsize\color{gray} 西安交通大学本科毕业设计（论文）}%
-\fancyhead[OC]{\color{gray}\leftmark}\fancyfoot[EL,OR]{\thepage}}
+\fancyhead[EC]{\small\color{gray} 西安交通大学本科毕业设计（论文）}%
+\fancyhead[OC]{\small\color{gray}\leftmark}\fancyfoot[EL,OR]{\thepage}}
 
 % adjust the format of each kind of title
 \setcounter{secnumdepth}{3} % include \subsubsection in the numbering
@@ -117,8 +117,7 @@
             colorlinks=false,
             plainpages=false,
             pdfpagelabels,
-            pdfborder=0 0 0,
-        }
+            pdfborder=0 0 0,}
 \urlstyle{same}
 
 % the acknowledge
@@ -127,3 +126,5 @@
     \chaptermark{#1}
     \addcontentsline{toc}{chapter}{#1}
 }
+
+\renewcommand*\contentsname{目\quad 录}

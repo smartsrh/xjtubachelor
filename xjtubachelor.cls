@@ -8,7 +8,7 @@
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
 \ProvidesClass{xjtubachelor}
 \LoadClass[a4paper,openany]{book}
-\RequirePackage[space]{ctexcap}\zihao{-4}
+\RequirePackage[space,cs4size]{ctexcap}
 \RequirePackage[numbers,sort&compress,square,super]{natbib} % the perfect position of natbib to avoid error
 \RequirePackage{graphicx,amsmath,hypernat,tabularx,array,longtable,threeparttable,booktabs,caption}
 \RequirePackage[left=2.6cm,right=2.6cm,top=3.0cm,bottom=2.5cm]{geometry}
@@ -31,7 +31,7 @@
 \CTEXsetup[name={,},number={\arabic{chapter}}]{chapter}
 \titleformat{\chapter}[block]{\center\fontsize{16bp}{0}\selectfont }{\thechapter}{1em}{}[]
 \titlespacing{\chapter}{0em}{1\baselineskip}{2\baselineskip}
-\titleformat{\section}[block]{\Large}{\thesection}{1em}{}[]
+\titleformat{\section}[block]{\fontsize{15bp}{0}\selectfont}{\thesection}{1em}{}[]
 \titlespacing{\section}{0em}{\baselineskip}{0.5\baselineskip}
 \titleformat{\subsection}[block]{\fontsize{14bp}{0}\selectfont }{\thesubsection}{1em}{}[]
 \titlespacing{\subsection}{2em}{0.5\baselineskip}{0\baselineskip}

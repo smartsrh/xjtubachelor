@@ -63,7 +63,7 @@
     \vspace{\baselineskip}
     \cncontent
     \\\\
-    {\normalsize\noindent{\bf 关键词}：\cnkeywords}
+    {\small\noindent{\bf 关键词}：\cnkeywords}
     \newpage
 
     \chaptermark{ABSTRACT}\noindent {\bf
@@ -74,10 +74,10 @@
     \begin{center}
         {\fontsize{16bp}{0}\selectfont ABSTRACT}
     \end{center}
-    \vspace{\baselineskip}
+    %\vspace{.5\baselineskip}
     {\setlength{\parindent}{0em}\setlength{\parskip}{1em}\encontent}
     \\\\
-    {\normalsize\noindent{\bf KEY WORDS}: \enkeywords}
+    {\small\noindent{\bf KEY WORDS}: \enkeywords}
     \newpage
 }
 
@@ -98,13 +98,13 @@
 
 % change the label of figure, table and equation
 \renewcommand\thefigure{% thanks to fitsir<at>gmail.com
-     \ifnum \c@chapter>\z@\thechapter-\fi\@arabic\c@figure%
+     \ifnum \c@chapter>\z@\thechapter -\fi\@arabic\c@figure%
 }
 \renewcommand\thetable{%
-    \ifnum \c@chapter >\z@ \thechapter-\fi \@arabic \c@table%
+    \ifnum \c@chapter >\z@ \thechapter -\fi \@arabic \c@table%
 }
 \renewcommand\theequation{%
-    \ifnum \c@chapter >\z@ \thechapter-\fi \@arabic \c@equation%
+    \ifnum \c@chapter >\z@ \thechapter -\fi \@arabic \c@equation%
 }
 
 % hyper references of contents
@@ -126,5 +126,5 @@
     \chaptermark{#1}
     \addcontentsline{toc}{chapter}{#1}
 }
-
+\renewcommand*{\bibfont}{\small}
 \renewcommand*\contentsname{目\quad 录}

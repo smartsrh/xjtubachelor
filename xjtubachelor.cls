@@ -10,7 +10,8 @@
 \LoadClass[a4paper,openany]{book}
 \RequirePackage[space,cs4size]{ctexcap}
 \RequirePackage[numbers,sort&compress,square,super]{natbib} % the perfect position of natbib to avoid error
-\RequirePackage{graphicx,amsmath,hypernat,tabularx,array,longtable,threeparttable,booktabs,caption}
+\RequirePackage{graphicx,hypernat,tabularx,array,longtable,threeparttable,booktabs,caption,enumerate,subfigure,bm,wrapfig}
+\RequirePackage[fleqn]{amsmath}
 \RequirePackage[left=2.6cm,right=2.6cm,top=3.0cm,bottom=2.5cm]{geometry}
 \RequirePackage{appendix}\RequirePackage[version=3]{mhchem}
 \renewcommand{\bibfont}{\normalsize}
@@ -18,12 +19,12 @@
 
 % adjust the style of the head and the foot of the style
 \RequirePackage{fancyhdr}\pagestyle{fancy}\fancyhf{}
-\fancyhead[EC]{\small\color{gray} 西安交通大学本科毕业设计（论文）}
-\fancyhead[OC]{\small\color{gray}\leftmark}\fancyfoot[EL,OR]{\thepage}
-\renewcommand{\headrule}{\hrule width\headwidth height.5bp\vspace{.4pt}\hrule width\headwidth height.5bp}
+\fancyhead[EC]{\small 西安交通大学本科毕业设计（论文）}
+\fancyhead[OC]{\small\leftmark}\fancyfoot[EL,OR]{\thepage}
+\renewcommand{\headrule}{\hrule width\headwidth height.5bp\vspace{.5pt}\hrule width\headwidth height.5bp}
 \fancypagestyle{plain}{\fancyhf{}%
-\fancyhead[EC]{\small\color{gray} 西安交通大学本科毕业设计（论文）}%
-\fancyhead[OC]{\small\color{gray}\leftmark}\fancyfoot[EL,OR]{\thepage}}
+\fancyhead[EC]{\small 西安交通大学本科毕业设计（论文）}%
+\fancyhead[OC]{\small\leftmark}\fancyfoot[EL,OR]{\thepage}}
 
 % adjust the format of each kind of title
 \setcounter{secnumdepth}{3} % include \subsubsection in the numbering
@@ -96,16 +97,11 @@
 % circled footnote number
 \renewcommand{\thefootnote}{\raisebox{.5pt}{\textcircled{\raisebox{-.5pt}{\scriptsize \arabic{footnote}}}}}
 
-% change the label of figure, table and equation
-\renewcommand\thefigure{% thanks to fitsir<at>gmail.com
-     \ifnum \c@chapter>\z@\thechapter -\fi\@arabic\c@figure%
-}
-\renewcommand\thetable{%
-    \ifnum \c@chapter >\z@ \thechapter -\fi \@arabic \c@table%
-}
-\renewcommand\theequation{%
-    \ifnum \c@chapter >\z@ \thechapter -\fi \@arabic \c@equation%
-}
+% change the label of figure, table and equation % thanks to fitsir<at>gmail.com
+\renewcommand{\tablename}{\small 表} \renewcommand{\figurename}{\small 图}
+\renewcommand\thefigure{\small \ifnum \c@chapter>\z@\thechapter -\fi\@arabic\c@figure}
+\renewcommand\thetable{\small \ifnum \c@chapter>\z@ \thechapter -\fi \@arabic\c@table}
+\renewcommand\theequation{\small \ifnum \c@chapter >\z@ \thechapter -\fi\@arabic \c@equation}
 
 % hyper references of contents
 \RequirePackage{hyperref}
@@ -128,3 +124,28 @@
 }
 \renewcommand*{\bibfont}{\small}
 \renewcommand*\contentsname{目\quad 录}
+
+% the coding environment
+\RequirePackage{listings, xcolor}
+\lstset{
+    numbers=left, 
+    numberstyle= \tiny,
+    basicstyle=\ttfamily,
+    stringstyle=\ttfamily, 
+    keywordstyle= \color{ blue!70},
+    commentstyle=\color{red!50!green!50!blue!50}, 
+    frame=shadowbox, 
+    rulesepcolor= \color{ red!20!green!20!blue!20} 
+}
+% highlight apdl
+\lstdefinelanguage{APDL} { 
+    morekeywords ={K,SOLU,SOLVE,FINISH},keywordstyle = \bfseries, 
+    classoffset = 1, 
+    morekeywords={ET,SOLID185,DENS,MPTEMP,MPDATA,BLC5,VIEW,ANG,DK,REP,FAST,FLST,ORDE,FITEM,CM,LINE,LSEL,P51X,CMSEL,LESIZE,MSHAPE,3D,MSHKEY,VOLU,VSEL,CHKMSH,VMESH,CMDELE,FK,ANTYPE,PSTRES,BUCOPT,EXPASS,MXPAND},keywordstyle = \color{blue}, 
+    classoffset = 0, 
+    sensitive=false, 
+    morecomment=[l]{!}, 
+    morecomment=[s]{/*}{*/}, 
+    morestring 
+    =[b]", 
+} 

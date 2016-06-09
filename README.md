@@ -19,7 +19,8 @@ The following packages are included in `xjtubachelor.cls`.
 - PDF pages insertion is supported by `pdfpages`;
 - Emoticon like '😇' is supported by `tikzsymbols`;
 - Chemical formula is supported by `mhchem`;
-- Compiling any subfile included in chapters leads to a whole thsis file.
+- Compiling any subfile included in chapters leads to a whole thsis file;
+- Only capitalize the 1st letter of reference author.
 
 ## How to use
 

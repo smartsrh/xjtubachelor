@@ -130,12 +130,13 @@
 \lstset{
     numbers=left, 
     numberstyle= \tiny,
-    basicstyle=\ttfamily,
+    basicstyle=\ttfamily\tiny,
     stringstyle=\ttfamily, 
     keywordstyle= \color{ blue!70},
     commentstyle=\color{red!50!green!50!blue!50}, 
     frame=shadowbox, 
-    rulesepcolor= \color{ red!20!green!20!blue!20} 
+    rulesepcolor= \color{ red!20!green!20!blue!20},
+    breaklines=true 
 }
 % highlight apdl
 \lstdefinelanguage{APDL} { 
@@ -149,4 +150,4 @@
     morestring 
     =[b]", 
 } 
-\renewcommand{\@biblabel}[1]{[#1]\hfill} % reference item code left-aligned
+\renewcommand{\@biblabel}[1]{[#1]\hfill} %reference item left-align

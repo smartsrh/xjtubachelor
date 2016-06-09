@@ -1,0 +1,55 @@
+%!TEX root = ../index.tex
+\chapter{测试代码环境} % (fold)
+\label{cha:测试代码环境}
+	\begin{lstlisting}[language=APDL]
+ET,1,SOLID185   
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDATA,DENS,1,,7800 ! density
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDATA,EX,1,,2.1e11 ! Young's modulus
+MPDATA,PRXY,1,,0.3  ! Poisson ratio
+BLC5,0,0,0.6,0.6,0.003 ! geometry of the sheet
+/VIEW,1,,,1 
+/ANG,1  
+/REP,FAST   
+/VIEW,1,,,1 
+/ANG,1  
+/REP,FAST   
+/VIEW,1,,,1 
+/ANG,1  
+/REP,FAST   
+/VIEW,1,1,2,3   
+/ANG,1  
+/REP,FAST   
+FLST,5,8,4,ORDE,2   
+FITEM,5,1   
+FITEM,5,-8  
+CM,_Y,LINE  
+LSEL, , , ,P51X 
+CM,_Y1,LINE 
+CMSEL,,_Y    
+LESIZE,_Y1, , ,20, , , , ,1  ! divide the lines to mesh 
+FLST,5,4,4,ORDE,2   
+FITEM,5,9   
+FITEM,5,-12 
+CM,_Y,LINE  
+LSEL, , , ,P51X 
+CM,_Y1,LINE 
+CMSEL,,_Y    
+LESIZE,_Y1, , ,1, , , , ,1   ! divide the lines to mesh 
+MSHAPE,0,3D 
+MSHKEY,1
+CM,_Y,VOLU  
+VSEL, , , ,       1 
+CM,_Y1,VOLU 
+CHKMSH,'VOLU'   
+CMSEL,S,_Y    
+VMESH,_Y1    
+CMDELE,_Y   
+CMDELE,_Y1  
+CMDELE,_Y2  
+FINISH
+    \end{lstlisting}
+% chapter 测试代码环境 (end)

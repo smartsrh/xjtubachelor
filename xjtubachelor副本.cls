@@ -10,7 +10,7 @@
 \LoadClass[a4paper,openany]{book}
 \RequirePackage[space,cs4size]{ctexcap}
 \RequirePackage[numbers,sort&compress,square,super]{natbib} % the perfect position of natbib to avoid error
-\RequirePackage{graphicx,hypernat,tabularx,array,longtable,threeparttable,booktabs,caption,enumerate,subfigure,bm,wrapfig}
+\RequirePackage{graphicx,hypernat,tabularx,array,longtable,threeparttable,booktabs,caption,enumerate,subfigure,bm,wrapfig,pdfpages,tikzsymbols}
 \RequirePackage[fleqn]{amsmath}
 \RequirePackage[left=2.6cm,right=2.6cm,top=3.0cm,bottom=2.5cm]{geometry}
 \RequirePackage{appendix}\RequirePackage[version=3]{mhchem}
@@ -141,7 +141,7 @@
 \lstdefinelanguage{APDL} { 
     morekeywords ={K,SOLU,SOLVE,FINISH},keywordstyle = \bfseries, 
     classoffset = 1, 
-    morekeywords={ET,SOLID185,DENS,MPTEMP,MPDATA,BLC5,VIEW,ANG,DK,REP,FAST,FLST,ORDE,FITEM,CM,LINE,LSEL,P51X,CMSEL,LESIZE,MSHAPE,3D,MSHKEY,VOLU,VSEL,CHKMSH,VMESH,CMDELE,FK,ANTYPE,PSTRES,BUCOPT,EXPASS,MXPAND},keywordstyle = \color{blue}, 
+    morekeywords={ET,SOLID185,DENS,MPTEMP,MPDATA,BLC5,VIEW,ANG,DK,REP,FAST,FLST,ORDE,FITEM,CM,LINE,LSEL,P51X,CMSEL,LESIZE,MSHAPE,3D,MSHKEY,VOLU,VSEL,CHKMSH,VMESH,CMDELE,FK,ANTYPE,PSTRES,BUCOPT,EXPASS,MXPAND,sect,secdata,EX,PRXY,shell,secoffset,MID,seccontrol,ASEL,AMESH,SHELL63,R,RMORE,K,REPLO,L,AROTAT,TYPE,REAL,DO,ENDDO,E,ACLEAR,MODOPT,LANB,EQSLV,SPAR,LUMPM,dl,all,SOL,STATUS,POST1,SET,LIST,CREATE,DIM,TABLE,CHRVAL,TREAD,TRNOPT,FULL,NSUBST,OUTRES,ERASE,AUTOTS,TIME,OUTR,ALPHAD,BETAD,F,SOLU,POST26,FILE,COLL,UI,NUMVAR,NCMIT,STORE,MERGE,FILLDATA,REALVAR,ANSOL,TOP,DEL,VGET,OUTPUT,VWRITE,OUTPUT,LSCLEAR,INPUT,FORCE},keywordstyle = \color{blue}, 
     classoffset = 0, 
     sensitive=false, 
     morecomment=[l]{!}, 
@@ -149,3 +149,4 @@
     morestring 
     =[b]", 
 } 
+\renewcommand{\@biblabel}[1]{[#1]\hfill} % reference item code left-aligned

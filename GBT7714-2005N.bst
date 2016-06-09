@@ -434,7 +434,9 @@ FUNCTION {boldface}
 Function{upcase}
 { duplicate$ empty$
     { pop$ "" }
-    { "u" change.case$ }
+    %{ "u" change.case$ }
+    { "\textup{" swap$ * "}" * } 
+    ％{ "\textsc{" swap$ * "}" * } 
   if$
 }
 FUNCTION {bib.name.font}

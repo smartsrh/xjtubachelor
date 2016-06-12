@@ -52,7 +52,7 @@
 
 % the two abstract pages
 \newcommand{\abstract}{
-    \chaptermark{摘\quad 要}\pagenumbering{Roman}
+    \chaptermark{摘\quad 要}\pagenumbering{Roman}\setcounter{page}{5}
     \noindent {\bf
         论文题目： \cntitle\\
         学生姓名： \cnstu\\
